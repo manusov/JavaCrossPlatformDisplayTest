@@ -159,12 +159,12 @@ Entry point for run performance benchmark as separate thread
         if ( se != null )
             {
             percentage = se.percentage;
-            String sMedian = String.format    ( " %.1f", se.median  );
-            String sMedianMin = String.format ( " %.1f", se.median1 );
-            String sMedianMax = String.format ( " %.1f", se.median2 );
-            String sAverage   = String.format ( " %.1f", se.average );
-            String sMin       = String.format ( " %.1f", se.min     );
-            String sMax       = String.format ( " %.1f", se.max     );
+            String sMedian = String.format    ( " %.2f", se.median  );
+            String sMedianMin = String.format ( " %.2f", se.median1 );
+            String sMedianMax = String.format ( " %.2f", se.median2 );
+            String sAverage   = String.format ( " %.2f", se.average );
+            String sMin       = String.format ( " %.2f", se.min     );
+            String sMax       = String.format ( " %.2f", se.max     );
             tModel.setValueAt ( sMedian,    0, 1 );
             tModel.setValueAt ( sMedianMin, 0, 2 );
             tModel.setValueAt ( sMedianMax, 0, 3 );

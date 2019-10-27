@@ -83,7 +83,7 @@ PerformanceFrame( Performance p,
     performanceLayout = new GridLayout( visualRows, visualColumns, 1, 1 );
     performancePanel = new JPanel( performanceLayout );
     statisticsPanel = new StatisticsPanel();
-    statisticsPanel.setPreferredSize( new Dimension( 460, 30 ) );
+    statisticsPanel.setPreferredSize( new Dimension( 480, 30 ) );
     allPanel = new JPanel( );
     allLayout = new BoxLayout( allPanel, BoxLayout.Y_AXIS );
     allPanel.setLayout( allLayout );
@@ -182,40 +182,43 @@ private class StatisticTimerListener implements ActionListener
         else
             {
             /*
-            Support statistics    
-            */
-            StringBuilder sb = 
-                new StringBuilder ( String.format( "Second=%d ", seconds ) );
-            sb.append( String.format( " FPS=%.1f", fps ) );
-            statistics.add( fps );
-            seconds = statistics.size();
-            double[] array = new double[seconds];
-            for( int i=0; i<seconds; i++ )
-                {
-                array[i] = statistics.get( i );
-                }
-            StatisticEntry entry = 
-                StatisticUtil.getStatistic( array, seconds, secondsStop );
-            double min = entry.min;
-            double max = entry.max;
-            double average = entry.average;
-            double median = entry.median;
-            sb.append( String.format
-                ( "   min=%.1f  max=%.1f  average=%.1f  median=%.1f",
-                  min, max, average, median ) );
-            statisticsPanel.setStatisticsString( sb.toString() );
-            statisticsPanel.repaint();
-            /*
-            Send data to higher level
-            */
-            performance.setStatisticEntry( entry );
-            performance.setLogArray( array );
-            /*
             Support session termination by count done
             */
-            if ( seconds > secondsStop )
+            if ( seconds >= secondsStop )
                 {
                 helperClosing( true );
+                }
+            else
+                {
+                /*
+                Support statistics    
+                */
+                StringBuilder sb = new StringBuilder 
+                    ( String.format( "Second=%d ", seconds ) );
+                sb.append( String.format( " FPS=%.1f", fps ) );
+                statistics.add( fps );
+                seconds = statistics.size();
+                double[] array = new double[seconds];
+                for( int i=0; i<seconds; i++ )
+                    {
+                    array[i] = statistics.get( i );
+                    }
+                StatisticEntry entry = StatisticUtil.calculateStatistic
+                    ( array, seconds, secondsStop );
+                double min = entry.min;
+                double max = entry.max;
+                double average = entry.average;
+                double median = entry.median;
+                sb.append( String.format
+                    ( "   min=%.1f  max=%.1f  average=%.1f  median=%.1f",
+                      min, max, average, median ) );
+                statisticsPanel.setStatisticsString( sb.toString() );
+                statisticsPanel.repaint();
+                /*
+                Send data to higher level
+                */
+                performance.setStatisticEntry( entry );
+                performance.setLogArray( array );
                 }
             }
         /*
@@ -237,7 +240,7 @@ private class UserCloseWindowListener extends WindowAdapter
         {
         helperClosing( false );
         performance.setTaskDone( true );
-        boolean doneAll = ( seconds > secondsStop );
+        boolean doneAll = ( seconds >= secondsStop );
         performance.setTaskInterrupt( ! doneAll );
         }
     }

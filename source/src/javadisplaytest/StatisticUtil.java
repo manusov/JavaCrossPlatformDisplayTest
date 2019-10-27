@@ -14,7 +14,7 @@ public class StatisticUtil
 /*
 method returns statistics representation of input array, 
 */
-public static StatisticEntry getStatistic
+public static StatisticEntry calculateStatistic
         ( double[] array, int countNow, int countMax )
     {
     MedianEntry medianEntry = findMedianIndex( array );
@@ -104,7 +104,7 @@ private static MedianEntry findMedianIndex( double[] arrayIn )
     double median1 = Double.NaN;
     double median2 = Double.NaN;
     double median3 = Double.NaN;
-    if ( ( array != null ) && ( n == 1 ) && ( n <= array.length ) )
+    if ( ( array != null ) && ( n == 1 ) )
         {  // median for one element array
         median = array[0];
         a = b = c = 0;
@@ -112,7 +112,7 @@ private static MedianEntry findMedianIndex( double[] arrayIn )
         median2 = array[b];
         median3 = array[c];
         }
-    else if ( ( array != null ) && ( n > 1 ) && ( n <= array.length ) )
+    else if ( ( array != null ) && ( n > 1 ) )
         {
         // sorting array, support values and indexes arrays
         boolean flag = true;

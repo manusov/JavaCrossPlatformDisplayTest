@@ -8,7 +8,7 @@ package javadisplaytest;
 
 public class About 
 {
-private final static String VERSION_NAME = "v0.01.00";
+private final static String VERSION_NAME = "v0.01.01";
 private final static String VENDOR_NAME  = "(C)2019 IC Book Labs";
 private final static String SHORT_NAME   = "Display Test " + VERSION_NAME;
 private final static String LONG_NAME    = "Java " + SHORT_NAME;

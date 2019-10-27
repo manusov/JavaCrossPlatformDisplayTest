@@ -453,7 +453,7 @@ private class LstReport implements ActionListener
                 s2 = new String[ logArray.length ][2];
                 for( int i=0; i< logArray.length; i++ )
                     {
-                    s2[i][0] = String.format( "%.1f" , logArray[i] );
+                    s2[i][0] = String.format( "%.2f" , logArray[i] );
                     boolean b = ( statisticEntry.medianIndex1 == i ) ||
                                 ( statisticEntry.medianIndex2 == i ) ||
                                 ( statisticEntry.medianIndex3 == i );

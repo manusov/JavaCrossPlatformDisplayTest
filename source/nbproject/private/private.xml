@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/3-java/project_displaytest/source/src/javadisplaytest/performance/PerformanceFrame.java</file>
+            <file>file:/C:/3-java/project_displaytest/source/src/javadisplaytest/Application.java</file>
+            <file>file:/C:/3-java/project_displaytest/source/src/javadisplaytest/ActionRun.java</file>
+            <file>file:/C:/3-java/project_displaytest/source/src/javadisplaytest/About.java</file>
+            <file>file:/C:/3-java/project_displaytest/source/src/javadisplaytest/JavaDisplayTest.java</file>
+            <file>file:/C:/3-java/project_displaytest/source/src/javadisplaytest/StatisticUtil.java</file>
+        </group>
     </open-files>
 </project-private>
