@@ -1,5 +1,5 @@
 /*
-Java Display Test and Benchmark Utility. (C)2019 IC Book Labs
+Java Display Test and Benchmark Utility. (C)2021 IC Book Labs
 --------------------------------------------------------------
 Table model for tables, especially generated for text report save.
 */

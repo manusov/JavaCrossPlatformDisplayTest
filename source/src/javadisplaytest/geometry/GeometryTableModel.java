@@ -1,5 +1,5 @@
 /*
-Java Display Test and Benchmark Utility. (C)2019 IC Book Labs
+Java Display Test and Benchmark Utility. (C)2021 IC Book Labs
 --------------------------------------------------------------
 Display geometry parameters representation as table model,
 used for GUI visualization and text report saving.

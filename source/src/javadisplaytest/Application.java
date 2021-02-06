@@ -1,5 +1,5 @@
 /*
-Java Display Test and Benchmark Utility. (C)2019 IC Book Labs
+Java Display Test and Benchmark Utility. (C)2021 IC Book Labs
 --------------------------------------------------------------
 Main GUI frame of application include buttons listeners.
 */
@@ -41,12 +41,11 @@ private final Performance performance;
 sizes of GUI components
 */
 private final static Dimension SIZE_WINDOW     = new Dimension ( 410, 450 );
-private final static Dimension SIZE_COMBO      = new Dimension ( 124, 21 );
-private final static Dimension SIZE_COMBO_HALF = new Dimension ( 124, 21 );
-private final static Dimension SIZE_PROGRESS   = new Dimension ( 189, 21 );
-private final static Dimension SIZE_BUTTON     = new Dimension ( 87, 24 );
-private final static Dimension SIZE_RUN        = new Dimension ( 78, 24 );
-private final static Dimension SIZE_LABEL      = new Dimension ( 85, 21 );
+private final static Dimension SIZE_COMBO      = new Dimension ( 145,  22 );
+private final static Dimension SIZE_PROGRESS   = new Dimension ( 189,  22 );
+private final static Dimension SIZE_BUTTON     = new Dimension (  96,  24 );
+private final static Dimension SIZE_RUN        = new Dimension (  78,  24 );
+private final static Dimension SIZE_LABEL      = new Dimension (  72,  21 );
 /*
 GUI components
 */
@@ -118,12 +117,12 @@ Application( Geometry geometry, Performance performance )
     for ( int i=0; i<performanceTable.getColumnCount(); i++ )
         { performanceTable.getColumnModel().getColumn(i).
             setCellRenderer( performanceTableRenderer ); }
-    l1 = new JLabel( "Matrix"      );
-    l2 = new JLabel( "Duration"    );
-    l3 = new JLabel( "Angle delta" );
-    l4 = new JLabel( "Render mode" );
-    l5 = new JLabel( "Picture"     );
-    l6 = new JLabel( "Run"         );
+    l1 = new JLabel( "Matrix"   );
+    l2 = new JLabel( "Duration" );
+    l3 = new JLabel( "Angle"    );
+    l4 = new JLabel( "Mode"     );
+    l5 = new JLabel( "Picture"  );
+    l6 = new JLabel( "Run"      );
     l1.setPreferredSize( SIZE_LABEL );
     l2.setPreferredSize( SIZE_LABEL );
     l3.setPreferredSize( SIZE_LABEL );
@@ -139,15 +138,15 @@ Application( Geometry geometry, Performance performance )
     c7 = new JComboBox();
     c8 = new JComboBox();
     c9 = new JComboBox();
-    c1.setPreferredSize( SIZE_COMBO_HALF );
-    c2.setPreferredSize( SIZE_COMBO_HALF );
+    c1.setPreferredSize( SIZE_COMBO );
+    c2.setPreferredSize( SIZE_COMBO );
     c3.setPreferredSize( SIZE_COMBO );
-    c4.setPreferredSize( SIZE_COMBO_HALF );
-    c5.setPreferredSize( SIZE_COMBO_HALF );
-    c6.setPreferredSize( SIZE_COMBO_HALF );
-    c7.setPreferredSize( SIZE_COMBO_HALF );
-    c8.setPreferredSize( SIZE_COMBO_HALF );
-    c9.setPreferredSize( SIZE_COMBO_HALF );
+    c4.setPreferredSize( SIZE_COMBO );
+    c5.setPreferredSize( SIZE_COMBO );
+    c6.setPreferredSize( SIZE_COMBO );
+    c7.setPreferredSize( SIZE_COMBO );
+    c8.setPreferredSize( SIZE_COMBO );
+    c9.setPreferredSize( SIZE_COMBO );
     /*
     Add items to combos
     */
@@ -248,39 +247,39 @@ Application( Geometry geometry, Performance performance )
     /*
     Make layout for left labels
     */
-    sl.putConstraint ( SpringLayout.NORTH, l1,  21, SpringLayout.SOUTH, sp );
-    sl.putConstraint ( SpringLayout.WEST,  l1,  22, SpringLayout.WEST,  p  );
+    sl.putConstraint ( SpringLayout.NORTH, l1,  15, SpringLayout.SOUTH, sp );
+    sl.putConstraint ( SpringLayout.WEST,  l1,  12, SpringLayout.WEST,  p  );
     sl.putConstraint ( SpringLayout.NORTH, l2,   6, SpringLayout.SOUTH, l1 );
-    sl.putConstraint ( SpringLayout.WEST,  l2,  22, SpringLayout.WEST,  p  );
+    sl.putConstraint ( SpringLayout.WEST,  l2,  12, SpringLayout.WEST,  p  );
     sl.putConstraint ( SpringLayout.NORTH, l3,   6, SpringLayout.SOUTH, l2 );
-    sl.putConstraint ( SpringLayout.WEST,  l3,  22, SpringLayout.WEST,  p  );
+    sl.putConstraint ( SpringLayout.WEST,  l3,  12, SpringLayout.WEST,  p  );
     sl.putConstraint ( SpringLayout.NORTH, l4,   6, SpringLayout.SOUTH, l3 );
-    sl.putConstraint ( SpringLayout.WEST,  l4,  22, SpringLayout.WEST,  p  );
+    sl.putConstraint ( SpringLayout.WEST,  l4,  12, SpringLayout.WEST,  p  );
     sl.putConstraint ( SpringLayout.NORTH, l5,   6, SpringLayout.SOUTH, l4 );
-    sl.putConstraint ( SpringLayout.WEST,  l5,  22, SpringLayout.WEST,  p  );
+    sl.putConstraint ( SpringLayout.WEST,  l5,  12, SpringLayout.WEST,  p  );
     sl.putConstraint ( SpringLayout.NORTH, l6,   6, SpringLayout.SOUTH, l5 );
-    sl.putConstraint ( SpringLayout.WEST,  l6,  22, SpringLayout.WEST,  p  );
+    sl.putConstraint ( SpringLayout.WEST,  l6,  12, SpringLayout.WEST,  p  );
     /*
     Make layout for combo boxes
     */
-    sl.putConstraint ( SpringLayout.NORTH, c1,  20, SpringLayout.SOUTH, sp );
+    sl.putConstraint ( SpringLayout.NORTH, c1,  15, SpringLayout.SOUTH, sp );
     sl.putConstraint ( SpringLayout.WEST,  c1,   1, SpringLayout.EAST,  l1 );
     sl.putConstraint ( SpringLayout.NORTH, c2,   0, SpringLayout.NORTH, l1 );
-    sl.putConstraint ( SpringLayout.WEST,  c2,  10, SpringLayout.EAST,  c1 );
+    sl.putConstraint ( SpringLayout.WEST,  c2,  12, SpringLayout.EAST,  c1 );
     sl.putConstraint ( SpringLayout.NORTH, c3,   6, SpringLayout.SOUTH, c2 );
     sl.putConstraint ( SpringLayout.WEST,  c3,   0, SpringLayout.WEST,  c1 );
     sl.putConstraint ( SpringLayout.NORTH, c4,   6, SpringLayout.SOUTH, c3 );
     sl.putConstraint ( SpringLayout.WEST,  c4,   0, SpringLayout.WEST,  c3 );
     sl.putConstraint ( SpringLayout.NORTH, c5,   0, SpringLayout.NORTH, c4 );
-    sl.putConstraint ( SpringLayout.WEST,  c5,  10, SpringLayout.EAST,  c4 );
+    sl.putConstraint ( SpringLayout.WEST,  c5,  12, SpringLayout.EAST,  c4 );
     sl.putConstraint ( SpringLayout.NORTH, c6,   6, SpringLayout.SOUTH, c4 );
     sl.putConstraint ( SpringLayout.WEST,  c6,   0, SpringLayout.WEST,  c4 );
     sl.putConstraint ( SpringLayout.NORTH, c7,   0, SpringLayout.NORTH, c6 );
-    sl.putConstraint ( SpringLayout.WEST,  c7,  10, SpringLayout.EAST,  c6 );
+    sl.putConstraint ( SpringLayout.WEST,  c7,  12, SpringLayout.EAST,  c6 );
     sl.putConstraint ( SpringLayout.NORTH, c8,   6, SpringLayout.SOUTH, c6 );
     sl.putConstraint ( SpringLayout.WEST,  c8,   0, SpringLayout.WEST,  c6 );
     sl.putConstraint ( SpringLayout.NORTH, c9,   0, SpringLayout.NORTH, c8 );
-    sl.putConstraint ( SpringLayout.WEST,  c9,  10, SpringLayout.EAST,  c8 );
+    sl.putConstraint ( SpringLayout.WEST,  c9,  12, SpringLayout.EAST,  c8 );
     /*
     Make layout for progress indicator
     */
@@ -516,3 +515,4 @@ private void helperDefaults()
     }
 
 }
+

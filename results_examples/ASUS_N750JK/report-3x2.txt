@@ -1,0 +1,97 @@
+Report file.
+Java Display Test v1.00.00
+(C)2021 IC Book Labs
+
+ Parameter                        Value  
+--------------------------------------------------
+ Screen size X                    1920   
+ Screen size Y                    1080   
+ Dots per inch (DPI)              96     
+ Application area size X          1920   
+ Application area size Y          1080   
+ Application area upper-left X    0      
+ Application area upper-left Y    0      
+--------------------------------------------------
+
+ Option    Value                        
+-------------------------------------------------
+ Matrix    3 columns x 2 rows           
+ Duration  60 seconds                   
+ Angle     0,5 degree , change polarity 
+ Mode      Parallel thread , no delay   
+ Picture   Dog , change picture         
+-------------------------------------------------
+
+ Value, FPS  Actual   Minimum  Maximum 
+--------------------------------------------
+ Median      585,33   581,00   589,67  
+ Average     569,31   454,83   741,83  
+--------------------------------------------
+
+Detail log.
+FPS = Frames per Second.
+Tag notes: M = Median
+
+ FPS     Tag 
+----------------------
+ 741,83      
+ 713,83      
+ 718,00      
+ 637,83      
+ 671,17      
+ 693,00      
+ 681,00      
+ 682,00      
+ 672,00      
+ 651,67      
+ 654,50      
+ 645,83      
+ 644,00      
+ 637,67      
+ 635,83      
+ 620,50      
+ 621,17      
+ 619,50      
+ 611,17      
+ 605,67      
+ 604,83      
+ 593,83      
+ 600,50      
+ 604,33      
+ 596,00      
+ 595,00      
+ 595,00      
+ 590,67      
+ 591,83      
+ 581,00  M   
+ 589,67  M   
+ 575,83      
+ 575,33      
+ 544,50      
+ 551,33      
+ 569,33      
+ 558,17      
+ 567,33      
+ 493,83      
+ 472,33      
+ 465,00      
+ 455,33      
+ 478,33      
+ 454,83      
+ 454,83      
+ 466,17      
+ 456,67      
+ 484,67      
+ 465,67      
+ 482,33      
+ 472,67      
+ 509,33      
+ 500,67      
+ 461,17      
+ 491,67      
+ 481,00      
+ 509,67      
+ 504,17      
+ 459,67      
+ 495,83      
+----------------------

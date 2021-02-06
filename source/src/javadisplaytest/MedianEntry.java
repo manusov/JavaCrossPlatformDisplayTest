@@ -1,5 +1,5 @@
 /*
-Java Display Test and Benchmark Utility. (C)2019 IC Book Labs
+Java Display Test and Benchmark Utility. (C)2021 IC Book Labs
 --------------------------------------------------------------
 Class for return detail info about array median value.
 Note. Lower, higher and center median elements required for

@@ -1,5 +1,5 @@
 /*
-Java Display Test and Benchmark Utility. (C)2019 IC Book Labs
+Java Display Test and Benchmark Utility. (C)2021 IC Book Labs
 --------------------------------------------------------------
 Static class with statistic library: min, max, median, average for arrays.
 Note array ordering software method don't replaced to java.util.Arrays.sort

@@ -1,5 +1,5 @@
 /*
-Java Display Test and Benchmark Utility. (C)2019 IC Book Labs
+Java Display Test and Benchmark Utility. (C)2021 IC Book Labs
 --------------------------------------------------------------
 Handler for "About" button.
  */
@@ -18,8 +18,8 @@ import java.net.URISyntaxException;
 class ActionAbout 
 {
 private final Color LOGO_COLOR = new Color(143,49,40);
-private final Dimension BUTTON_HTTP_SIZE   = new Dimension (180, 25);
-private final Dimension BUTTON_CANCEL_SIZE = new Dimension (89, 25);
+private final static Dimension SIZE_BUTTON_HTTP   = new Dimension ( 198, 25 );
+private final static Dimension SIZE_BUTTON_CANCEL = new Dimension ( 75, 25 );
     
 // Entry point for "About" dialogue method, setup GUI
 JDialog createDialog
@@ -47,8 +47,11 @@ JDialog createDialog
     JButton b1 = new JButton(sHttp);
     JButton b2 = new JButton(sCancel);
     // buttons size
-    b1.setPreferredSize(BUTTON_HTTP_SIZE);
-    b2.setPreferredSize(BUTTON_CANCEL_SIZE);
+    b1.setPreferredSize( SIZE_BUTTON_HTTP );
+    b2.setPreferredSize( SIZE_BUTTON_CANCEL );
+    Font font2 = new Font ( "Verdana", Font.PLAIN, 11 );  // font for buttons
+    b1.setFont( font2 );
+    b2.setFont( font2 );
     // labels layout
     sl1.putConstraint ( SpringLayout.NORTH, l1,  24, SpringLayout.NORTH, p1 );
     sl1.putConstraint ( SpringLayout.WEST,  l1,  28, SpringLayout.WEST,  p1 );
