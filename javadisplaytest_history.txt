@@ -1,3 +1,7 @@
+JavaDisplayTest v1.00.01 (February, 06, 2021)
+1) Change some GUI elements coordinates.
+
+
 JavaDisplayTest v1.00.00 (February, 06, 2021)
 1) Change web link.
 2) Some changes at GUI.

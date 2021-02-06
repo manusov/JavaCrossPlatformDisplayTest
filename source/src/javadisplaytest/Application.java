@@ -249,15 +249,15 @@ Application( Geometry geometry, Performance performance )
     */
     sl.putConstraint ( SpringLayout.NORTH, l1,  15, SpringLayout.SOUTH, sp );
     sl.putConstraint ( SpringLayout.WEST,  l1,  12, SpringLayout.WEST,  p  );
-    sl.putConstraint ( SpringLayout.NORTH, l2,   6, SpringLayout.SOUTH, l1 );
+    sl.putConstraint ( SpringLayout.NORTH, l2,   7, SpringLayout.SOUTH, l1 );
     sl.putConstraint ( SpringLayout.WEST,  l2,  12, SpringLayout.WEST,  p  );
-    sl.putConstraint ( SpringLayout.NORTH, l3,   6, SpringLayout.SOUTH, l2 );
+    sl.putConstraint ( SpringLayout.NORTH, l3,   7, SpringLayout.SOUTH, l2 );
     sl.putConstraint ( SpringLayout.WEST,  l3,  12, SpringLayout.WEST,  p  );
-    sl.putConstraint ( SpringLayout.NORTH, l4,   6, SpringLayout.SOUTH, l3 );
+    sl.putConstraint ( SpringLayout.NORTH, l4,   7, SpringLayout.SOUTH, l3 );
     sl.putConstraint ( SpringLayout.WEST,  l4,  12, SpringLayout.WEST,  p  );
-    sl.putConstraint ( SpringLayout.NORTH, l5,   6, SpringLayout.SOUTH, l4 );
+    sl.putConstraint ( SpringLayout.NORTH, l5,   7, SpringLayout.SOUTH, l4 );
     sl.putConstraint ( SpringLayout.WEST,  l5,  12, SpringLayout.WEST,  p  );
-    sl.putConstraint ( SpringLayout.NORTH, l6,   6, SpringLayout.SOUTH, l5 );
+    sl.putConstraint ( SpringLayout.NORTH, l6,  12, SpringLayout.SOUTH, l5 );
     sl.putConstraint ( SpringLayout.WEST,  l6,  12, SpringLayout.WEST,  p  );
     /*
     Make layout for combo boxes
